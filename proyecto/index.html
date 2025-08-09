@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Profesional</title>
+    <link rel="icon" href="Resources/Favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Style/main.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+
+
+    <meta name="description"
+        content="Portafolio profesional de Camila Morales, desarrolladora web enfocada en diseño accesible, responsive y moderno.">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom px-3 main-tool-bar" role="navigation"
+        aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand swaps" href="#" aria-label="Página principal - Logo de la marca">
+                <img src="Resources/LogoNegativo.svg" alt="Logo de la marca" width="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Alternar menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent" style="width: 100%;">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="flex-wrap: nowrap;" role="menubar"
+                    aria-label="Menú principal">
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="#" data-i18n="menu_inicio" role="menuitem"
+                            aria-label="Ir a Inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="#conoceme" data-i18n="menu_conoceme" role="menuitem"
+                            aria-label="Ir a sección Conóceme">Conóceme</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="#servicios" data-i18n="menu_servicios" role="menuitem"
+                            aria-label="Ir a sección Servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="#colab" data-i18n="menu_colaboremos" role="menuitem"
+                            aria-label="Ir a sección Colaboremos">Colaboremos</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="#proyectos" data-i18n="menu_proyectos" role="menuitem"
+                            aria-label="Ir a sección Proyectos">Proyectos</a>
+                    </li>
+                </ul>
+
+                <div class="d-lg-flex d-none align-items-center ms-auto gap-2" role="region"
+                    aria-label="Selector de idioma y contacto">
+                    <label for="select-language-lg" class="visually-hidden">Seleccionar idioma</label>
+                    <select id="select-language-lg" class="form-select select-language" style="width: auto;"
+                        aria-describedby="language-description-lg">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                    </select>
+                    <span id="language-description-lg" class="visually-hidden">Seleccione el idioma del sitio web</span>
+
+                    <a href="#contactame" aria-label="Ir a la sección de contacto">
+                        <button class="btn btn-contacto" data-i18n="btn_contactame" type="button">Contáctame</button>
+                    </a>
+                </div>
+
+                <div class="d-lg-none d-flex flex-column mt-3 gap-2 w-100" role="region"
+                    aria-label="Selector de idioma y contacto para móvil">
+                    <label for="select-language-sm" class="visually-hidden">Seleccionar idioma</label>
+                    <select id="select-language-sm" class="form-select select-language" style="width: auto;"
+                        aria-describedby="language-description-sm">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                    </select>
+                    <span id="language-description-sm" class="visually-hidden">Seleccione el idioma del sitio web</span>
+
+                    <a href="#contactame" aria-label="Ir a la sección de contacto">
+                        <button class="btn btn-contacto w-100" type="button">Contáctame</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="banner-section container py-5" role="region"
+            aria-label="Sección principal de bienvenida con presentación y enlaces">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="banner-title" data-i18n="banner_nombre" id="banner-title">Camila Morales</h1>
+                    <p class="banner-subtitle" aria-describedby="banner-description">
+                        <span data-i18n="banner_linea1">Construyendo el futuro,</span>
+                        <span class="linea-accent typed-text" data-i18n="banner_linea2">línea por línea</span>
+                    </p>
+                    <span id="banner-description" class="visually-hidden">Introducción y lema motivacional</span>
+
+                    <div class="banner-buttons d-flex justify-content-center justify-content-lg-start gap-3 mt-4"
+                        role="group" aria-label="Botones de acción principales">
+                        <a href="#" id="btnDescargarCV" class="btn btn-main" data-i18n="btn_cv" role="button"
+                            aria-label="Descargar Curriculum Vitae">Descargar CV</a>
+                        <a href="https://www.linkedin.com/in/camila-morales2005/" class="btn btn-outline"
+                            data-i18n="btn_linkedin" role="button"
+                            aria-label="Ir a perfil de LinkedIn de Camila Morales" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                    <img src="Resources/fotoprofesional.jpg" alt="Foto profesional de Camila Morales"
+                        class="banner-image" role="img" aria-describedby="foto-desc">
+                    <span id="foto-desc" class="visually-hidden">Foto profesional de Camila Morales sonriendo</span>
+                </div>
+
+            </div>
+        </section>
+
+        <br id="conoceme">
+        <section class="conoceme-section container" role="region"
+            aria-label="Sección Sobre mí - presentación personal y estadísticas">
+            <h2 class="titulo-seccion typed-text" data-i18n="conoceme_titulo" id="sobre-mi-title">Sobre mí</h2>
+            <p class="descripcion" data-i18n="conoceme_descripcion" aria-describedby="sobre-mi-desc">
+                Desarrolladora de software freelance con una profunda pasión por la tecnología y la resolución de
+                problemas. Me especializo en el desarrollo de aplicaciones web y móviles, siempre enfocándome en crear
+                soluciones funcionales, atractivas y centradas en la experiencia del usuario. Me caracterizo por ser
+                responsable, organizada y con una gran atención al detalle, lo que me permite entregar resultados de
+                calidad en cada proyecto.
+            </p>
+            <span id="sobre-mi-desc" class="visually-hidden">Breve descripción personal sobre la experiencia y
+                habilidades.</span>
+
+            <div class="row mt-4 text-center stats-row" role="list" aria-label="Estadísticas personales">
+                <div class="col-md-4 mb-4 stat-col" role="listitem">
+                    <h3 class="stat-valor animate-attention" data-i18n="conoceme_anos" aria-label="Experiencia">2 años
+                    </h3>
+                    <p class="stat-texto" data-i18n="conoceme_experiencia">de experiencia</p>
+                </div>
+                <div class="col-md-4 mb-4 stat-col" role="listitem">
+                    <h3 class="stat-valor animate-attention" data-i18n="conoceme_lenguajes"
+                        aria-label="Lenguajes de programación">+8 lenguajes</h3>
+                    <p class="stat-texto" data-i18n="conoceme_programacion">de programación</p>
+                </div>
+                <div class="col-md-4 mb-4 stat-col" role="listitem">
+                    <h3 class="stat-valor animate-attention" data-i18n="conoceme_proyectos"
+                        aria-label="Proyectos completados">+10 proyectos</h3>
+                    <p class="stat-texto" data-i18n="conoceme_completados">completados</p>
+                </div>
+            </div>
+        </section>
+
+        <br id="servicios">
+        <section class="services container-fluid container" data-aos="fade-left" data-aos-duration="1200" role="region"
+            aria-label="Sección de Servicios ofrecidos">
+            <h1 class="titulo-seccion text-start mb-3" data-i18n="servicios_titulo" id="servicios-title">Servicios</h1>
+            <p class="descripcion mb-5 text-justify" data-i18n="servicios_descripcion"
+                aria-describedby="servicios-desc">
+                Ofrezco una variedad de servicios enfocados en la creación y diseño de soluciones digitales. Mi objetivo
+                es transformar ideas en productos funcionales, atractivos y accesibles para todos los usuarios.
+            </p>
+            <span id="servicios-desc" class="visually-hidden">Descripción de los servicios que se ofrecen.</span>
+
+            <div class="swiper mySwiper" role="list" aria-labelledby="servicios-title">
+                <div class="swiper-wrapper">
+
+                    <article class="swiper-slide servicio-card text-center" role="listitem"
+                        aria-labelledby="servicio-web-titulo" tabindex="0">
+                        <div class="servicio-imagen-wrapper">
+                            <div class="imagen-circulo">
+                                <img src="Resources/webapp.jpg" alt="Icono representando Aplicaciones Web">
+                            </div>
+                        </div>
+                        <h3 class="servicio-titulo" data-i18n="servicio_web" id="servicio-web-titulo">Desarrollo de
+                            aplicaciones web</h3>
+                        <p class="servicio-descripcion" data-i18n="servicio_web_desc"
+                            aria-describedby="desc-servicio-web">
+                            Construcción de sistemas dinámicos y funcionales adaptados a tus necesidades empresariales.
+                        </p>
+                        <span id="desc-servicio-web" class="visually-hidden">Construcción de sistemas dinámicos y
+                            funcionales adaptados a tus necesidades empresariales.</span>
+                    </article>
+
+                    <article class="swiper-slide servicio-card text-center" role="listitem"
+                        aria-labelledby="servicio-movil-titulo" tabindex="0">
+                        <div class="servicio-imagen-wrapper">
+                            <div class="imagen-circulo">
+                                <img src="Resources/mobile.jpg" alt="Icono representando Aplicaciones móviles">
+                            </div>
+                        </div>
+                        <h3 class="servicio-titulo" data-i18n="servicio_movil" id="servicio-movil-titulo">Desarrollo de
+                            aplicaciones móviles</h3>
+                        <p class="servicio-descripcion" data-i18n="servicio_movil_desc"
+                            aria-describedby="desc-servicio-movil">
+                            Desarrollo de aplicaciones Android modernas, intuitivas y de alto rendimiento.
+                        </p>
+                        <span id="desc-servicio-movil" class="visually-hidden">Desarrollo de aplicaciones Android
+                            modernas, intuitivas y de alto rendimiento.</span>
+                    </article>
+
+                    <article class="swiper-slide servicio-card text-center" role="listitem"
+                        aria-labelledby="servicio-ui-titulo" tabindex="0">
+                        <div class="servicio-imagen-wrapper">
+                            <div class="imagen-circulo">
+                                <img src="Resources/ui.jpg" alt="Icono representando Diseño de interfaces">
+                            </div>
+                        </div>
+                        <h3 class="servicio-titulo" data-i18n="servicio_ui" id="servicio-ui-titulo">Diseño de interfaces
+                        </h3>
+                        <p class="servicio-descripcion" data-i18n="servicio_ui_desc"
+                            aria-describedby="desc-servicio-ui">
+                            Interfaces atractivas, accesibles y centradas en el usuario para mejorar la experiencia
+                            digital.
+                        </p>
+                        <span id="desc-servicio-ui" class="visually-hidden">Interfaces atractivas, accesibles y
+                            centradas en el usuario para mejorar la experiencia digital.</span>
+                    </article>
+
+                    <article class="swiper-slide servicio-card text-center" role="listitem"
+                        aria-labelledby="servicio-websimple-titulo" tabindex="0">
+                        <div class="servicio-imagen-wrapper">
+                            <div class="imagen-circulo">
+                                <img src="Resources/website.jpg" alt="Icono representando Páginas web">
+                            </div>
+                        </div>
+                        <h3 class="servicio-titulo" data-i18n="servicio_websimple" id="servicio-websimple-titulo">
+                            Desarrollo de páginas web</h3>
+                        <p class="servicio-descripcion" data-i18n="servicio_websimple_desc"
+                            aria-describedby="desc-servicio-websimple">
+                            Sitios web responsivos y optimizados para destacar tu marca o negocio en línea.
+                        </p>
+                        <span id="desc-servicio-websimple" class="visually-hidden">Sitios web responsivos y optimizados
+                            para destacar tu marca o negocio en línea.</span>
+                    </article>
+
+                    <article class="swiper-slide servicio-card text-center" role="listitem"
+                        aria-labelledby="servicio-logo-titulo" tabindex="0">
+                        <div class="servicio-imagen-wrapper">
+                            <div class="imagen-circulo">
+                                <img src="Resources/logo.jpg" alt="Icono representando Diseño de logotipos">
+                            </div>
+                        </div>
+                        <h3 class="servicio-titulo" data-i18n="servicio_logo" id="servicio-logo-titulo">Diseño de
+                            logotipos</h3>
+                        <p class="servicio-descripcion" data-i18n="servicio_logo_desc"
+                            aria-describedby="desc-servicio-logo">
+                            Creación de identidades visuales únicas que representen tu esencia de forma profesional.
+                        </p>
+                        <span id="desc-servicio-logo" class="visually-hidden">Creación de identidades visuales únicas
+                            que representen tu esencia de forma profesional.</span>
+                    </article>
+
+                    <article class="swiper-slide servicio-card text-center" role="listitem"
+                        aria-labelledby="servicio-escritorio-titulo" tabindex="0">
+                        <div class="servicio-imagen-wrapper">
+                            <div class="imagen-circulo">
+                                <img src="Resources/desktopapp.jpg"
+                                    alt="Icono representando Aplicaciones de escritorio">
+                            </div>
+                        </div>
+                        <h3 class="servicio-titulo" data-i18n="servicio_escritorio" id="servicio-escritorio-titulo">
+                            Aplicaciones de escritorio</h3>
+                        <p class="servicio-descripcion" data-i18n="servicio_escritorio_desc"
+                            aria-describedby="desc-servicio-escritorio">
+                            Soluciones robustas y eficientes para computadoras, adaptadas a flujos de trabajo
+                            específicos.
+                        </p>
+                        <span id="desc-servicio-escritorio" class="visually-hidden">Soluciones robustas y eficientes
+                            para computadoras, adaptadas a flujos de trabajo específicos.</span>
+                    </article>
+
+                </div>
+
+                <div class="swiper-pagination mt-3" aria-label="Paginación de servicios"></div>
+            </div>
+        </section>
+
+        <br id="colab" />
+        <section class="colaboracion-section" role="region" aria-labelledby="colab-title">
+            <div class="container py-5">
+
+                <h1 class="titulo-seccionwhite" data-i18n="colaboracion_titulo" id="colab-title">Trabajemos juntos</h1>
+
+                <div class="row justify-content-center align-items-start text-center" role="list"
+                    aria-label="Pasos para colaboración">
+
+                    <article class="col-12 col-md-3 paso fade-step active mx-2" data-aos="flip-left"
+                        data-aos-duration="1200" role="listitem" tabindex="0" aria-describedby="desc-paso1">
+                        <img src="Resources/conversacion.png" alt="Icono paso 1: conversación" class="paso-img" />
+                        <h3>
+                            <span class="text-white" data-i18n="paso">Paso</span>
+                            <span class="text-accent" aria-label="Número uno">1</span>
+                        </h3>
+                        <p class="paso-subtitulo fw-semibold text-white" data-i18n="paso1_sub">Hablemos de tu idea para
+                            el proyecto</p>
+                        <p class="paso-descripcion text-white" data-i18n="paso1_desc" id="desc-paso1">Agenda una reunión
+                            para definir lo que necesitas.</p>
+                    </article>
+
+                    <div class="linea-divisora d-none d-md-block" aria-hidden="true"></div>
+
+                    <article class="col-12 col-md-3 paso fade-step mx-2" data-aos="flip-left" data-aos-duration="1200"
+                        role="listitem" tabindex="0" aria-describedby="desc-paso2">
+                        <img src="Resources/cotizacion.png" alt="Icono paso 2: cotización" class="paso-img" />
+                        <h3>
+                            <span class="text-white" data-i18n="paso">Paso</span>
+                            <span class="text-accent" aria-label="Número dos">2</span>
+                        </h3>
+                        <p class="paso-subtitulo fw-semibold text-white" data-i18n="paso2_sub">Aprobamos cotización y
+                            alcance</p>
+                        <p class="paso-descripcion text-white" data-i18n="paso2_desc" id="desc-paso2">Te presento una
+                            propuesta clara y ajustada a tu proyecto.</p>
+                    </article>
+
+                    <div class="linea-divisora d-none d-md-block" aria-hidden="true"></div>
+
+                    <article class="col-12 col-md-3 paso fade-step mx-2" data-aos="flip-left" data-aos-duration="1200"
+                        role="listitem" tabindex="0" aria-describedby="desc-paso3">
+                        <img src="Resources/aprobado.png" alt="Icono paso 3: aprobación" class="paso-img" />
+                        <h3>
+                            <span class="text-white" data-i18n="paso">Paso</span>
+                            <span class="text-accent" aria-label="Número tres">3</span>
+                        </h3>
+                        <p class="paso-subtitulo fw-semibold text-white" data-i18n="paso3_sub">Revisa y aprueba el
+                            diseño</p>
+                        <p class="paso-descripcion text-white" data-i18n="paso3_desc" id="desc-paso3">Te muestro un
+                            mockup inicial antes de comenzar el desarrollo.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <br id="proyectos" />
+        <section class="projects-section container mt-5" role="region" aria-labelledby="proyectos-title">
+            <h1 class="titulo-seccion" data-i18n="proyectos_titulo" id="proyectos-title">Proyectos</h1>
+            <p class="descripcion" data-i18n="proyectos_intro" aria-describedby="proyectos-desc">
+                Aquí puedes explorar algunos de los proyectos que he desarrollado, cada uno enfocado en resolver
+                necesidades reales con soluciones funcionales y atractivas.
+            </p>
+            <span id="proyectos-desc" class="visually-hidden">Introducción a los proyectos desarrollados y sus
+                características principales.</span>
+
+            <div class="row g-4" role="list" aria-label="Lista de proyectos destacados">
+
+                <article class="col-md-4" data-aos="fade-left" data-aos-duration="1200" role="listitem" tabindex="0"
+                    aria-labelledby="proyecto1-titulo" aria-describedby="proyecto1-desc">
+                    <div class="project-card p-3">
+                        <img src="Resources/Agromaker.png" class="img-fluid mb-3 mx-auto d-block"
+                            alt="Logo de Agromarket" />
+                        <h3 class="text-center fw-bold text-white" data-i18n="proyecto1_nombre" id="proyecto1-titulo">
+                            Agromarket</h3>
+                        <div class="text-center mb-2" aria-label="Tecnologías usadas: HTML, JS, MongoDB, CSS">
+                            <span class="tag">HTML</span>
+                            <span class="tag">JS</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <p class="text-white text-justify mb-3" data-i18n="proyecto1_desc" id="proyecto1-desc">
+                            Aplicación web para venta de productos agrícolas
+                        </p>
+                        <div class="text-center">
+                            <a href="https://github.com/Cmoralescen/Agromarketapp"><button class="btn-explorar"
+                                    data-i18n="proyectos_boton"
+                                    aria-label="Explorar proyecto Agromarket">Explorar</button></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-4" data-aos="fade-left" data-aos-duration="1200" role="listitem" tabindex="0"
+                    aria-labelledby="proyecto2-titulo" aria-describedby="proyecto2-desc">
+                    <div class="project-card p-3">
+                        <img src="Resources/Stockify.png" class="img-fluid mb-3 mx-auto d-block"
+                            alt="Logo de Stockify" />
+                        <h3 class="text-center fw-bold text-white" data-i18n="proyecto2_nombre" id="proyecto2-titulo">
+                            Stockify</h3>
+                        <div class="text-center mb-2" aria-label="Tecnologías usadas: C#, Razor, SQL, JS">
+                            <span class="tag">C#</span>
+                            <span class="tag">Razor</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">JS</span>
+                        </div>
+                        <p class="text-white text-justify mb-3" data-i18n="proyecto2_desc" id="proyecto2-desc">
+                            Aplicación web para venta y compra de acciones.
+                        </p>
+                        <div class="text-center">
+                            <a href="https://github.com/Cmoralescen/Stockify"><button class="btn-explorar"
+                                    data-i18n="proyectos_boton"
+                                    aria-label="Explorar proyecto Stockify">Explorar</button></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-4" data-aos="fade-left" data-aos-duration="1200" role="listitem" tabindex="0"
+                    aria-labelledby="proyecto3-titulo" aria-describedby="proyecto3-desc">
+                    <div class="project-card p-3">
+                        <img src="Resources/PetHeatlh.png" class="img-fluid mb-3 mx-auto d-block"
+                            alt="Logo de Pet Health" />
+                        <h3 class="text-center fw-bold text-white" data-i18n="proyecto3_nombre" id="proyecto3-titulo">
+                            Pet Health</h3>
+                        <div class="text-center mb-2" aria-label="Tecnologías usadas: Java, Firebase, Android">
+                            <span class="tag">Java</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Android</span>
+                        </div>
+                        <p class="text-white text-justify mb-3" data-i18n="proyecto3_desc" id="proyecto3-desc">
+                            Aplicación móvil para registro médico veterinario.
+                        </p>
+                        <div class="text-center">
+                            <a href="https://github.com/Cmoralescen/Pet-health"><button class="btn-explorar"
+                                    data-i18n="proyectos_boton"
+                                    aria-label="Explorar proyecto Pet Health">Explorar</button></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="project-large-box mt-5 p-4 d-flex flex-column flex-md-row justify-content-between align-items-center"
+                data-aos="fade-up" data-aos-duration="1500" role="region" aria-label="Explorar todos los proyectos">
+                <h2 class="text-white fw-bold text-center text-md-start mb-3 mb-md-0"
+                    style="text-shadow: 2px 2px 6px rgba(0,0,0,0.6);" data-i18n="proyectos_todos">
+                    Explorar todos los proyectos
+                </h2>
+                <div class="text-center">
+                    <a href="https://github.com/Cmoralescen?tab=repositories"><button class="btn-explorar"
+                            data-i18n="proyectos_boton" aria-label="Explorar todos los proyectos">Explorar</button></a>
+                </div>
+            </div>
+        </section>
+
+        <br id="contactame" />
+        <section id="contacto" class="container py-5" role="region" aria-labelledby="contacto-title">
+            <h2 class="titulo-seccion text-center mb-4" data-i18n="contacto_titulo" id="contacto-title">Contáctame</h2>
+            <p class="descripcion text-justify mb-5" data-i18n="contacto_descripcion" id="contacto-desc">
+                Completa el formulario para comenzar a construir tu proyecto juntos. Estoy emocionado por escuchar tus
+                ideas y ayudarte a darles vida de forma profesional y personalizada.
+            </p>
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 mb-4 mb-md-0 text-center">
+                    <img src="Resources/contacto.svg" alt="Ilustración de contacto" class="img-fluid contacto-img"
+                        data-aos="flip-right" data-aos-duration="1200" />
+                </div>
+
+                <div class="col-md-6">
+                    <form id="form-contacto" aria-describedby="contacto-desc" novalidate>
+                        <input type="hidden" name="to_email" value="cmoralessolano@outlook.com" />
+
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label label-contacto"
+                                data-i18n="label_nombre">Nombre</label>
+                            <input type="text" name="user_name" id="nombre" class="form-control input-contacto"
+                                aria-required="true" aria-describedby="nombre-help" />
+                            <span id="nombre-help" class="visually-hidden">Ingrese su nombre completo</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="correo" class="form-label label-contacto" data-i18n="label_correo">Correo
+                                electrónico</label>
+                            <input type="email" name="user_email" id="correo" class="form-control input-contacto"
+                                aria-required="true" aria-describedby="correo-help" />
+                            <span id="correo-help" class="visually-hidden">Ingrese su correo electrónico válido</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label label-contacto"
+                                data-i18n="label_telefono">Teléfono</label>
+                            <input type="tel" name="user_phone" id="telefono" class="form-control input-contacto"
+                                aria-describedby="telefono-help" />
+                            <span id="telefono-help" class="visually-hidden">Ingrese su número de teléfono</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label label-contacto"
+                                data-i18n="label_mensaje">Mensaje</label>
+                            <textarea name="message" id="mensaje" class="form-control input-contacto mensaje-contacto"
+                                aria-required="true" aria-describedby="mensaje-help"></textarea>
+                            <span id="mensaje-help" class="visually-hidden">Escriba su mensaje aquí</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-center mt-4" style="position: relative; width: 200px; margin: auto;">
+                <div class="contenedor-btn">
+                    <div id="btnEnviar" class="button btn-contacto" role="button" tabindex="0"
+                        aria-label="Enviar formulario de contacto">
+                        <div class="text" data-i18n="btn_enviar">Enviar</div>
+                        <div class="progress-bar"></div>
+                        <svg x="0px" y="0px" viewBox="0 0 25 25" style="enable-background:new 0 0 25 25;">
+                            <path class="check" d="M4,14 L10,20 L21,7" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-svg">
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+                class="transition duration-300 ease-in-out delay-150">
+                <style>
+                    .path-0 {
+                        animation: pathAnim-0 4s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    }
+
+                    @keyframes pathAnim-0 {
+                        0% {
+                            d: path("M 0,400 L 0,100 C 87.6820512820513,86.9948717948718 175.3641025641026,73.9897435897436 247,75 C 318.6358974358974,76.0102564102564 374.22564102564104,91.03589743589744 449,87 C 523.774358974359,82.96410256410256 617.7333333333333,59.866666666666674 695,63 C 772.2666666666667,66.13333333333333 832.8410256410256,95.49743589743588 927,115 C 1021.1589743589744,134.50256410256412 1148.9025641025642,144.14358974358976 1240,140 C 1331.0974358974358,135.85641025641024 1385.548717948718,117.92820512820512 1440,100 L 1440,400 L 0,400 Z");
+                        }
+
+                        25% {
+                            d: path("M 0,400 L 0,100 C 90.57435897435897,97.34871794871795 181.14871794871794,94.6974358974359 251,80 C 320.85128205128206,65.3025641025641 369.97948717948725,38.55897435897437 456,51 C 542.0205128205127,63.44102564102563 664.9333333333334,115.06666666666666 762,127 C 859.0666666666666,138.93333333333334 930.2871794871794,111.174358974359 1002,100 C 1073.7128205128206,88.825641025641 1145.9179487179485,94.23589743589743 1219,97 C 1292.0820512820515,99.76410256410257 1366.0410256410257,99.8820512820513 1440,100 L 1440,400 L 0,400 Z");
+                        }
+
+                        50% {
+                            d: path("M 0,400 L 0,100 C 103.84871794871793,88.64871794871794 207.69743589743587,77.2974358974359 275,82 C 342.30256410256413,86.7025641025641 373.0589743589744,107.45897435897434 449,100 C 524.9410256410256,92.54102564102566 646.0666666666667,56.86666666666666 729,71 C 811.9333333333333,85.13333333333334 856.6743589743589,149.07435897435897 923,147 C 989.3256410256411,144.92564102564103 1077.2358974358974,76.83589743589744 1167,58 C 1256.7641025641026,39.16410256410256 1348.3820512820512,69.58205128205128 1440,100 L 1440,400 L 0,400 Z");
+                        }
+
+                        75% {
+                            d: path("M 0,400 L 0,100 C 98.1820512820513,121.74615384615383 196.3641025641026,143.49230769230766 271,145 C 345.6358974358974,146.50769230769234 396.72564102564104,127.77692307692308 473,113 C 549.274358974359,98.22307692307692 650.7333333333332,87.4 741,74 C 831.2666666666668,60.599999999999994 910.3410256410257,44.62307692307692 986,61 C 1061.6589743589743,77.37692307692308 1133.9025641025642,126.1076923076923 1209,138 C 1284.0974358974358,149.8923076923077 1362.048717948718,124.94615384615385 1440,100 L 1440,400 L 0,400 Z");
+                        }
+
+                        100% {
+                            d: path("M 0,400 L 0,100 C 87.6820512820513,86.9948717948718 175.3641025641026,73.9897435897436 247,75 C 318.6358974358974,76.0102564102564 374.22564102564104,91.03589743589744 449,87 C 523.774358974359,82.96410256410256 617.7333333333333,59.866666666666674 695,63 C 772.2666666666667,66.13333333333333 832.8410256410256,95.49743589743588 927,115 C 1021.1589743589744,134.50256410256412 1148.9025641025642,144.14358974358976 1240,140 C 1331.0974358974358,135.85641025641024 1385.548717948718,117.92820512820512 1440,100 L 1440,400 L 0,400 Z");
+                        }
+                    }
+                </style>
+                <defs>
+                    <linearGradient id="gradient" x1="67%" y1="3%" x2="33%" y2="97%">
+                        <stop offset="5%" stop-color="#9c7dfb"></stop>
+                        <stop offset="95%" stop-color="#6454b2"></stop>
+                    </linearGradient>
+                </defs>
+                <path
+                    d="M 0,400 L 0,100 C 87.6820512820513,86.9948717948718 175.3641025641026,73.9897435897436 247,75 C 318.6358974358974,76.0102564102564 374.22564102564104,91.03589743589744 449,87 C 523.774358974359,82.96410256410256 617.7333333333333,59.866666666666674 695,63 C 772.2666666666667,66.13333333333333 832.8410256410256,95.49743589743588 927,115 C 1021.1589743589744,134.50256410256412 1148.9025641025642,144.14358974358976 1240,140 C 1331.0974358974358,135.85641025641024 1385.548717948718,117.92820512820512 1440,100 L 1440,400 L 0,400 Z"
+                    stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53"
+                    class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+                <style>
+                    .path-1 {
+                        animation: pathAnim-1 4s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    }
+
+                    @keyframes pathAnim-1 {
+                        0% {
+                            d: path("M 0,400 L 0,233 C 94.26923076923075,212.8025641025641 188.5384615384615,192.6051282051282 267,201 C 345.4615384615385,209.3948717948718 408.11538461538464,246.3820512820513 495,243 C 581.8846153846154,239.6179487179487 693.0000000000001,195.86666666666665 762,189 C 830.9999999999999,182.13333333333335 857.8846153846155,212.15128205128207 920,215 C 982.1153846153845,217.84871794871793 1079.4615384615383,193.52820512820512 1172,192 C 1264.5384615384617,190.47179487179488 1352.269230769231,211.73589743589744 1440,233 L 1440,400 L 0,400 Z");
+                        }
+
+                        25% {
+                            d: path("M 0,400 L 0,233 C 89.74615384615385,233.04615384615386 179.4923076923077,233.0923076923077 260,225 C 340.5076923076923,216.9076923076923 411.776923076923,200.67692307692306 475,192 C 538.223076923077,183.32307692307694 593.4,182.20000000000002 678,200 C 762.6,217.79999999999998 876.623076923077,254.52307692307693 957,256 C 1037.376923076923,257.4769230769231 1084.1076923076923,223.7076923076923 1159,214 C 1233.8923076923077,204.2923076923077 1336.9461538461537,218.64615384615385 1440,233 L 1440,400 L 0,400 Z");
+                        }
+
+                        50% {
+                            d: path("M 0,400 L 0,233 C 68.03846153846152,232.7641025641026 136.07692307692304,232.52820512820514 220,224 C 303.92307692307696,215.47179487179486 403.7307692307693,198.65128205128204 489,188 C 574.2692307692307,177.34871794871796 645.0000000000001,172.8666666666667 720,187 C 794.9999999999999,201.1333333333333 874.2692307692307,233.88205128205124 950,233 C 1025.7307692307693,232.11794871794876 1097.923076923077,197.6051282051282 1179,192 C 1260.076923076923,186.3948717948718 1350.0384615384614,209.6974358974359 1440,233 L 1440,400 L 0,400 Z");
+                        }
+
+                        75% {
+                            d: path("M 0,400 L 0,233 C 54.24871794871794,239.84102564102565 108.49743589743588,246.6820512820513 202,255 C 295.5025641025641,263.3179487179487 428.25897435897446,273.11282051282046 522,276 C 615.7410256410255,278.88717948717954 670.4666666666667,274.8666666666667 735,267 C 799.5333333333333,259.1333333333333 873.874358974359,247.42051282051278 961,242 C 1048.125641025641,236.57948717948722 1148.0358974358974,237.45128205128205 1230,237 C 1311.9641025641026,236.54871794871795 1375.9820512820513,234.77435897435896 1440,233 L 1440,400 L 0,400 Z");
+                        }
+
+                        100% {
+                            d: path("M 0,400 L 0,233 C 94.26923076923075,212.8025641025641 188.5384615384615,192.6051282051282 267,201 C 345.4615384615385,209.3948717948718 408.11538461538464,246.3820512820513 495,243 C 581.8846153846154,239.6179487179487 693.0000000000001,195.86666666666665 762,189 C 830.9999999999999,182.13333333333335 857.8846153846155,212.15128205128207 920,215 C 982.1153846153845,217.84871794871793 1079.4615384615383,193.52820512820512 1172,192 C 1264.5384615384617,190.47179487179488 1352.269230769231,211.73589743589744 1440,233 L 1440,400 L 0,400 Z");
+                        }
+                    }
+                </style>
+                <defs>
+                    <linearGradient id="gradient" x1="67%" y1="3%" x2="33%" y2="97%">
+                        <stop offset="5%" stop-color="#9c7dfb"></stop>
+                        <stop offset="95%" stop-color="#6454b2"></stop>
+                    </linearGradient>
+                </defs>
+                <path
+                    d="M 0,400 L 0,233 C 94.26923076923075,212.8025641025641 188.5384615384615,192.6051282051282 267,201 C 345.4615384615385,209.3948717948718 408.11538461538464,246.3820512820513 495,243 C 581.8846153846154,239.6179487179487 693.0000000000001,195.86666666666665 762,189 C 830.9999999999999,182.13333333333335 857.8846153846155,212.15128205128207 920,215 C 982.1153846153845,217.84871794871793 1079.4615384615383,193.52820512820512 1172,192 C 1264.5384615384617,190.47179487179488 1352.269230769231,211.73589743589744 1440,233 L 1440,400 L 0,400 Z"
+                    stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
+                    class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="footer-contacto">
+                <i class='bx bx-phone'></i> (+506)88515497
+            </div>
+            <div class="footer-contacto">
+                <i class='bx bx-envelope'></i> cmoralessolano@outlook.com
+            </div>
+            <div class="footer-iconos">
+                <a href="https://github.com/Cmoralescen"><button><i class='bx bxl-github'></i></button></a>
+                <a href="https://www.linkedin.com/in/camila-morales2005/"><button><i
+                            class='bx bxl-linkedin'></i></button></a>
+            </div>
+        </div>
+
+    </footer>
+    <div class="whatsapp-widget">
+        <button id="whatsappBtn" style="background: none; border: none; padding: 0; cursor: pointer;">
+            <img src="Resources/whatsapp.png" width="60" alt="WhatsApp">
+        </button>
+
+        <div class="whatsapp-popup" id="whatsappPopup">
+            <div class="whatsapp-header" data-i18n="whatsapp_titulo">
+                Contactame para trabajar juntos!
+            </div>
+            <div class="whatsapp-body">
+                <p><strong>👋 <span data-i18n="whatsapp_saludo">Hola!</span></strong></p>
+                <p data-i18n="whatsapp_mensaje">Escribeme para que comencemos a planear tu nuevo proyecto juntos.</p>
+                <p data-i18n="whatsapp_nombre">Camila Morales</p>
+            </div>
+            <div class="whatsapp-input">
+                <input type="text" id="whatsappMessage" placeholder="Type here..."
+                    data-i18n-placeholder="whatsapp_placeholder">
+                <button id="sendWhatsapp">➤</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="progress">
+        <span id="progress-value">
+            <i class='bx bx-up-arrow-alt' style='color:#ffffff'></i>
+        </span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Logic/main.js"></script>
+    <script src="Logic/translations.js"></script>
+    <script src="Logic/animations.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        emailjs.init('6xZLGrph_eoQJyg6j');
+    </script>
+</body>
+
+</html>

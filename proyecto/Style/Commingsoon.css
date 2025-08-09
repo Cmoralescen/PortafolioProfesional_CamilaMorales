@@ -1,0 +1,64 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+main {
+  flex: 1; 
+}
+
+body {
+  overflow-x: hidden;
+}
+.wave-header svg,
+.wave-footer svg {
+  width: 100% ;
+    max-height: 150px;
+  height: auto;
+  display: block;
+}
+
+
+.text-main {
+  color: #6454B2; 
+   font-size: 3.7rem;
+}
+
+.text-future {
+  color: #6454B2;
+  font-size: 1.4rem;
+  font-weight: 900;
+
+}
+
+.text-name {
+  color: black;
+ font-style: italic;
+ font-weight: 400;
+}
+
+.text-highlight {
+  color: #6454B2;
+}
+
+#countdown div {
+  background-color: #83d2e3;
+  color: #6454B2;
+  padding: 15px 25px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  min-width: 100px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  #countdown div {
+    font-size: 1rem;
+    padding: 10px 15px;
+    min-width: 90px;
+  }
+}
